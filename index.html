@@ -1,16 +1,12 @@
 <!DOCTYPE HTML>
-<!--
-	Dopetrope 2.5 by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+
 <html>
 	<head>
 		<title>London Star Club</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
-		<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900,300italic" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/slideshow.css" />		<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900,300italic" rel="stylesheet" />
 		<script src="js/jquery.min.js"></script>
 		<script src="js/jquery.dropotron.min.js"></script>
 		<script src="js/config.js"></script>
@@ -21,6 +17,14 @@
 			<link rel="stylesheet" href="css/style.css" />
 			<link rel="stylesheet" href="css/style-desktop.css" />
 		</noscript>
+		
+		<!-- 	SLIDER STYLESHEETS	-->
+    <script src="js/modernizr-2.6.1.min.js"></script> 
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <script src="js/lean-slider.js"></script>
+    <link rel="stylesheet" href="css/lean-slider.css" type="text/css" />
+    <link rel="stylesheet" href="css/sample-styles.css" type="text/css" />
+		
 	</head>
 	<body class="homepage">
 
@@ -54,24 +58,50 @@
 												<li><a href="no-sidebar.html">Members</a></li>
 												<li><a href="no-sidebar.html">Contact Us</a></li>
 											</ul>
-										</nav>
-
+										</nav>						
 								</section>
 
 						</div>
 					</div>
 					<div class="row">
 						<div class="12u">
-
+						
 							<!-- Banner -->
 								<section id="banner">
-									<a href="http://facebook.com/DreametryDoodle">
-										<span class="image image-full"><img src="images/pic01.jpg" alt="" /></span>
+									
+									<!-- <a href="http://facebook.com/LondonStarClub">
+										<span class="image image-full"><img src="images/pic01-02.jpg" alt="" /></span>
 										<!-- <header> HEADER IN MIDDLE OF IMAGE
 											<h2>Howdy. This is Dopetrope.</h2>
 											<span class="byline">A responsive template by HTML5 UP</span>
-										</header> -->
-									</a>
+										</header> 
+									</a> 		-->					
+									
+									<div class="slider-wrapper">
+									<div id="slider">
+										<div class="slide1">
+										<img src="images/pic01-01.jpg" alt="" />
+										</div>
+											<div class="slide2">
+											<img src="images/pic01-02.jpg" alt="" />
+											</div>
+												<div class="slide3">
+												<img src="images/pic01-03.jpg" alt="" />
+												</div>
+													</div>
+											<div id="slider-direction-nav"></div>
+											<div id="slider-control-nav"></div>
+									</div>
+									
+									<script type="text/javascript">
+										$(document).ready(function() {
+										var slider = $('#slider').leanSlider({
+										directionNav: '#slider-direction-nav',
+										controlNav: '#slider-control-nav'
+										});
+											});
+									</script>
+									
 								</section>
 
 						</div>
