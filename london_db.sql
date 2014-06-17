@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 17, 2014 at 02:06 AM
+-- Generation Time: Jun 17, 2014 at 12:44 AM
 -- Server version: 5.6.16
 -- PHP Version: 5.5.11
 
@@ -56,25 +56,11 @@ CREATE TABLE IF NOT EXISTS `events` (
   `typeID` int(11) NOT NULL COMMENT 'typeID will contain what type of event it is, corporate, student or mystery',
   `date` date NOT NULL,
   `time` time NOT NULL,
-  `venueID` int(11) NOT NULL,
+  `location` text NOT NULL,
   `pricemale` decimal(10,0) NOT NULL,
   `pricefemale` decimal(10,0) NOT NULL,
   `memberprice` decimal(10,0) NOT NULL,
   `stock` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `venues`
---
-
-CREATE TABLE IF NOT EXISTS `venues` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(30) NOT NULL,
-  `description` text NOT NULL,
-  `location` text NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
