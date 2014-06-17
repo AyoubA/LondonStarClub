@@ -24,9 +24,7 @@
     <script src="js/lean-slider.js"></script>
     <link rel="stylesheet" href="css/lean-slider.css" type="text/css" />
     <link rel="stylesheet" href="css/sample-styles.css" type="text/css" />
-	
-	<!-- MEMBER SIGN UP FEE. DIFFERENT DISCOUNT FOR EACH EVENT.-->
-	
+		
 	</head>
 	<body class="homepage">
 
@@ -45,19 +43,23 @@
 									<!-- TOP BAR NAVIGATION -->
 										<nav id="nav">
 											<ul>
-												<li class="current_page_item"><a href="index.html">Home</a></li>
+<li class=""><a href="index.html">Home</a></li>
 												<li> 
-													<a href="">Corporate Events</a>
-												</li>	
+												
+
+<li class="current_page_item"><a href="CorporateEvents.php">Corporate Events</a></li>
+
+</li>	
 												
 												<li>
 												<a href="index.html">Club Nights</a>
 													<ul> 
-														<li> <a href="students.html">Student Nights </a></li>
+														<li> <a href="index.html">Student Nights </a></li>
+														<li> <a href="index.html">Mystery Club </a></li>
+														<li> <a href="index.html">Happy Hour </a></li>
 													</ul>
 												</li> <!-- End of Club Nights Drop Down -->
-												<li><a href="">Mystery Club/Happy Hour </a></li> <!-- make it stand out -->
-												<li><a href="">Charity Events</a></li>
+												
 												<li><a href="tickets.html">Tickets</a></li>
 												<li><a href="index.html">Members</a></li>
 												<li><a href="contact.html">Contact Us</a></li>
@@ -77,21 +79,21 @@
 										<div class="slide1">
 										<img class="rounded" src="images/pic01-01.jpg" alt="" />
 										<header style="background-color: transparent;">
-											<h2>Corporate Events.</h2>
+											<h2>Corporate Dinners</h2>
 											<span class="byline">Lorem ipsum dolor sit amet sit veroeros sed et blandit</span>
 										</header>
 										</div>
 											<div class="slide2">
 											<img class="rounded" src="images/pic01-02.jpg" alt="" />
 											<header style="background-color: transparent;">
-											<h2>Student Nights.</h2>
+											<h2>Corporate Roof top events</h2>
 											<span class="byline">Lorem ipsum dolor sit amet sit veroeros sed et blandit</span>
 										</header>
 											</div>
 												<div class="slide3">
 												<img class="rounded" src="images/pic01-03.jpg" alt="" />
 												<header style="background-color: transparent;">
-											<h2>Mystery Events.</h2>
+											<h2>Corporate Meetings.</h2>
 											<span class="byline">Lorem ipsum dolor sit amet sit veroeros sed et blandit</span>
 										</header>
 												</div>
@@ -119,77 +121,74 @@
 				</div>
 			</div> 
 		
-		
 		<!-- Main Wrapper -->
-			<div id="main-wrapper">		
-				<div class="container">
-														<!-- SOCIAL BUTTONS -->
-								<div align="center" style="margin-top:10px; background: url('images/bg02.png');">
-									<ul class="social" style="margin: 0 0 1em 0;">
-										<li style="margin-left: 2em;"><a class="fa fa-facebook solo" href="http://www.facebook.com/LondonStarClub"><span>Facebook</span></a></li>
-										<li style="margin-left: 2em;"><a class="fa fa-twitter solo" href="http://twitter.com/n33co"><span>Twitter</span></a></li>
-										<li style="margin-left: 2em;"><a class="fa fa-instagram solo" href=""><span>Dribbble</span></a></li>
-
-									</ul>
-								</div>
-					<div class="row">
-						<div class="12u">
-						
-								
-							<!-- Latest and Upcoming -->
-								<section>
-
-								<div class="row">
-						<div class="12u">
-
-								<section>
-									<header class="major">
-										<h2>Latest and Upcoming</h2>
-									</header>
-									<div>
-										<div class="row">
-											<div class="6u">
-												<section class="box">
-													<a href="http://facebook.com/LondonStarClubs" class="image image-full"><img src="images/pic08.jpg" alt="" /></a>
-													<header>
-														<h3>Corporate Events at Cafe de Paris</h3>
-														<span class="byline">Posted 45 minutes ago</span>
-													</header>
-													<p>Lorem ipsum dolor sit amet sit veroeros sed et blandit consequat sed veroeros lorem et blandit  adipiscing feugiat phasellus tempus hendrerit, tortor vitae mattis tempor, sapien sem feugiat sapien, id suscipit magna felis nec elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos lorem ipsum dolor sit amet.</p>
-													<footer class="actions">
-														<a href="#" class="button fa fa-file-text">Buy Tickets</a>
-														<a href="#" class="button alt fa fa-comment">33 Attending</a>
-													</footer>
-												</section>
-											</div>
-											<div class="6u">
-												<section class="box">
-													<a href="http://facebook.com/LondonStarClubs" class="image image-full"><img src="images/pic09.jpg" alt="" /></a>
-													<header>
-														<h3>Student Nights at Fabric</h3>
-														<span class="byline">Posted 45 minutes ago</span>
-													</header>
-													<p>Lorem ipsum dolor sit amet sit veroeros sed et blandit consequat sed veroeros lorem et blandit  adipiscing feugiat phasellus tempus hendrerit, tortor vitae mattis tempor, sapien sem feugiat sapien, id suscipit magna felis nec elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos lorem ipsum dolor sit amet.</p>
-													<footer class="actions">
-														<a href="#" class="button fa fa-file-text">Buy tickets</a>
-														<a href="#" class="button alt fa fa-comment">245 Students Going!</a>
-													</footer>
-												</section>
-											</div>
-										</div>
-									</div>
-								</section> 
+<div id="main-wrapper">
+<div class="container">
+<div class="row">
+<div class="12u">
 							
-						</div>
-									</div>
-								
-								<br/>
-								<!-- break between larger event ads and smaller ones -->
-								<br/>
+<!-- Portfolio -->
+<section>
+<div>
+<div class="row">
+<div class="12u skel-cell-important">
+			
 
-									<div>
-										<div class="row">
-											<div class="4u">
+
+
+<div>
+<div class='row'>
+<?php
+
+// Create connection
+
+$db = new PDO('mysql:host=localhost;dbname=test;charset=utf8', 'root', '');
+
+// Check connection
+
+$sql = "SELECT * FROM events";
+
+$STH = $db->query($sql);  //USE PREPARE FOR INSERT QUERIES AND QUERY FOR SELECT QUERIES
+
+while ($row = $STH->fetch(PDO::FETCH_ASSOC)) {
+
+
+echo "<div class='4u'>";
+echo "<section class='box'>";
+
+echo "<a href='http://facebook.com/LondonStarClubs' class='image image-full'><img src='images/pic02.jpg' alt='' /></a>";
+
+echo "<header>";
+echo "<h3>" .$row['name'] . "</h3>";
+echo "</header>";
+
+echo "<p>" . $row['description'] . "</p>" ;
+echo "<footer>";
+echo "<a href='#' class='button alt'>Find out more</a>";
+echo "</footer>";
+echo "</section>";
+echo "</div>";
+
+
+
+//  echo $row['Name'] . " " . $row['Description'];
+//  echo "<br>";
+
+}
+
+?>
+
+</section>
+</div>
+</div>					
+</div>
+</div>								
+
+<!--											
+<div>
+
+<div class="row">
+<div class="4u">
 												<section class="box">
 													<a href="http://facebook.com/LondonStarClubs" class="image image-full"><img src="images/pic02.jpg" alt="" /></a>
 													<header>
@@ -199,10 +198,12 @@
 													<footer>
 														<a href="#" class="button alt">Find out more</a>
 													</footer>
-												</section>
-											</div>
-											<div class="4u">
-												<section class="box">
+</section>
+</div>
+
+*************************************************
+											
+<div class="4u">											<section class="box">
 													<a href="http://facebook.com/LondonStarClubs" class="image image-full"><img src="images/pic03.jpg" alt="" /></a>
 													<header>
 														<h3>Boogie Nights Party</h3>
@@ -211,10 +212,13 @@
 													<footer>
 														<a href="#" class="button alt">Find out more</a>
 													</footer>
-												</section>
-											</div>
-											<div class="4u">
-												<section class="box">
+</section>
+</div>
+	
+
+*************************************************
+										
+<div class="4u">											<section class="box">
 													<a href="http://facebook.com/LondonStarClubs" class="image image-full"><img src="images/pic04.jpg" alt="" /></a>
 													<header>
 														<h3>Arabian Nights</h3>
@@ -223,26 +227,83 @@
 													<footer>
 														<a href="#" class="button alt">Find out more</a>
 													</footer>
-												</section>
-											</div>
-										</div>
+</section>
+</div>
 
-									</div>
-									<hr/>
-								</section>
 
-						</div>
-					</div>
-					
-				</div>
-			</div>
+
+*************************************************-->
+
+
+
+
+
+
+
+
 
 		<!-- Footer Wrapper -->
 			<div id="footer-wrapper">
 				
 				<!-- Footer -->
 					<section id="footer" class="container">
-					
+						<div class="row">
+							<div class="8u">
+
+								<section>
+									<!--<header>
+										<h2>Blandit nisl adipiscing</h2>
+									</header>
+									<ul class="dates">
+										<li>
+											<span class="date">Jan <strong>27</strong></span>
+											<h3><a href="#">Lorem dolor sit amet veroeros</a></h3>
+											<p>Ipsum dolor sit amet veroeros consequat blandit ipsum phasellus lorem consequat etiam.</p>
+										</li>
+										<li>
+											<span class="date">Jan <strong>23</strong></span>
+											<h3><a href="#">Ipsum sed blandit nisl consequat</a></h3>
+											<p>Blandit phasellus lorem ipsum dolor tempor sapien tortor hendrerit adipiscing feugiat lorem.</p>
+										</li>
+										<li>
+											<span class="date">Jan <strong>15</strong></span>
+											<h3><a href="#">Magna tempus lorem feugiat</a></h3>
+											<p>Dolore consequat sed phasellus lorem sed etiam nullam dolor etiam sed amet sit consequat.</p>
+										</li>
+										<li>
+											<span class="date">Jan <strong>12</strong></span>
+											<h3><a href="#">Dolore tempus ipsum feugiat nulla</a></h3>
+											<p>Feugiat lorem dolor sed nullam tempus lorem ipsum dolor sit amet nullam consequat.</p>
+										</li>
+										<li>
+											<span class="date">Jan <strong>10</strong></span>
+											<h3><a href="#">Blandit tempus aliquam?</a></h3>
+											<p>Feugiat sed tempus blandit tempus adipiscing nisl lorem ipsum dolor sit amet dolore.</p>
+										</li>
+									</ul>
+								</section>
+							
+							</div>
+							<div class="4u">
+							
+								<section>
+									<header>
+										<h2>What's this all about?</h2>
+									</header>
+									<a href="http://facebook.com/DreametryDoodle" class="image image-full"><img src="images/pic10.jpg" alt="" /></a>
+									<p>
+										This is <a href="http://html5up.net/dopetrope/">Dopetrope</a> a free, fully responsive HTML5 site template by 
+										<a href="http://n33.co">AJ</a> for <a href="http://html5up.net/">HTML5 UP</a> It's released for free under
+										the <a href="http://html5up.net/license/">CCA</a> license so feel free to use it for any personal or commercial project &ndash;
+										just don't forget to credit us! <strong>PS:</strong> The awesome placeholder artwork used in this design is courtesy of <a href="http://facebook.com/DreametryDoodle/">Dreametry Doodle</a>.
+									</p>
+									<footer>
+										<a href="#" class="button">Find out more</a>
+									</footer>
+								</section>-->
+							
+							</div>
+						</div>
 						<div class="row">
 							<div class="4u">
 
@@ -287,7 +348,9 @@
 									<ul class="social">
 										<li><a class="fa fa-facebook solo" href="#"><span>Facebook</span></a></li>
 										<li><a class="fa fa-twitter solo" href="http://twitter.com/n33co"><span>Twitter</span></a></li>
-										<li><a class="fa fa-instagram solo" href=""><span>Dribbble</span></a></li>
+										<li><a class="fa fa-dribbble solo" href="http://dribbble.com/n33"><span>Dribbble</span></a></li>
+										<li><a class="fa fa-linkedin solo" href="#"><span>LinkedIn</span></a></li>
+										<li><a class="fa fa-google-plus solo" href="#"><span>Google+</span></a></li>
 									</ul>
 									<ul class="contact">
 										<li>
@@ -295,7 +358,7 @@
 											<p>
 												Untitled Incorporated<br />
 												1234 Somewhere Road Suite #5432<br />
-												Mayfair, W1
+												Nashville, TN 00000-0000
 											</p>
 										</li>
 										<li>
@@ -304,23 +367,22 @@
 										</li>
 										<li>
 											<h3>Phone</h3>
-											<p> +44 000-0000</p>
+											<p>(800) 000-0000</p>
 										</li>
 									</ul>
 								</section>
 							
 							</div>
 						</div>
-						
 						<div class="row">
 							<div class="12u">
 							
 								<!-- Copyright -->
 									<div id="copyright">
 										<ul class="links">
-											<li>&copy; London Star Clubs	</li>
-											<li>Images: <a href="http://facebook.com/LondonStarClubs">Novus Liesure</a></li>
-											<li>Design: <a href="">AJM</a></li>
+											<li>&copy; Untitled	</li>
+											<li>Images: <a href="http://facebook.com/DreametryDoodle">Dreametry Doodle</a></li>
+											<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 										</ul>
 									</div>
 
