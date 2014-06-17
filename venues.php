@@ -19,8 +19,6 @@
 		</noscript>
 		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
 		
-					<link rel="stylesheet" href="css/forms.css" />
-		
 	<!-- MEMBER SIGN UP FEE. DIFFERENT DISCOUNT FOR EACH EVENT.-->
 	
 	</head>
@@ -61,7 +59,7 @@
 														<li> <a href="register.php"> Become a member </a></li>
 													</ul>
 												</li> <!-- End of Members Drop Down -->
-												<li class="current_page_item"><a href="contact.php">Contact Us</a></li>
+												<li><a href="contact.php">Contact Us</a></li>
 											</ul>
 										</nav>						
 								</section>
@@ -88,88 +86,100 @@
 			<div id="main-wrapper">		
 				<div class="container">
 						
-						<div class="row">
+					<div class="row">
 						<div class="12u">
 							
-							<!-- CONTACT BOXES -->
+							<!-- Portfolio -->
 								<section>
-									<header class="major">
-									</header>
 									<div>
 										<div class="row">
-											<div class="4u">
-											
-												<!-- contact us -->
-													<section class="box">
-						<div class="wrapper">
-		<div id="main" style="padding:0 0 0 0;">
-		
-		<!-- Form -->
-		<?php
-		
-		if (isset($_POST['postdata']))		
-		print '<label><span>Message succesfully sent!</span></label>';
-		
-			
-		?>
-		<form id="contact-form" action="contact_confirmation.php" method="post">
-			<h3>Contact Us</h3>
-			<h4>Fill in the form below, and we'll get back to you as soon as possible.</h4>
-			<div>
-				<label>
-					<span>Name: (required)</span>
-					<input placeholder="Please enter your name" type="text" name="name" required autofocus>
-				</label>
-			</div>
-			<div>
-				<label>
-					<span>Email: (required)</span>
-					<input placeholder="Please enter your email address" type="email" name="email" required>
-				</label>
-			</div>
-			<div>
-				<label>
-					<span>Telephone: (required)</span>
-					<input placeholder="Please enter your number" type="tel" name="telephone" required>
-				</label>
-			</div>
-			<div>
-				<label>
-					<span>Message: (required)</span>
-					<textarea placeholder="Include all the details you can" name="messege" required> </textarea>
-				</label>
-			</div>
-			<div>
-				<button name="submit" type="submit">Send Email</button>
-			</div>
-		</form>
-		<!-- /Form -->
-		
-		</div>
-	</div>
-													</section>
-											</div>
-                   <!-- /contact us -->
-                   
+											<div class="12u skel-cell-important">
 												
-											<div class="8u skel-cell-important">
-												<!-- map -->
+												<!-- Content -->
 													<article class="box is-post">
-						<p><iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d19863.831679204024!2d-0.12612350000001993!3d51.51360199999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sgoogle+tube+maps+london!5e0!3m2!1sen!2suk!4v1402942530804" width="720" height="500" frameborder="0" style="border:0"></iframe></p>
-                        
-                        <h3>Address</h3><br />
-                        <p>1 Example <br/>
-W1 55 </p><br />
-			
-			<p>Tel: 207732432</p>										</article>
-            
-            <!--/ map -->
+														<a href="http://facebook.com/LondonStarClub" class="image image-full"><img src="images/pic01-01.jpg" alt="" /></a>
+														<header>
+															<h2>Venues</h2>
+															<span class="byline">List of all of our venues</span>
+														</header>
+
+														<p>
+															Praesent a dolor leo. Duis in felis in tortor lobortis volutpat et pretium tellus. Vestibulum ac ante nisl, 
+															a elementum odio. Duis semper risus et lectus commodo fringilla. Maecenas sagittis convallis justo vel mattis. 
+															placerat, nunc diam iaculis massa, et aliquet nibh leo non nisl vitae porta lobortis, enim neque fringilla nunc, 
+															eget faucibus lacus sem quis nunc suspendisse nec lectus sit amet augue rutrum vulputate ut ut mi. Aenean 
+															elementum, mi sit amet porttitor lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor.
+														</p>
+
+														<section>
+															<header>
+																<h3>Piccadilly</h3>
+															</header>
+															<p>
+																Nunc diam iaculis massa, et aliquet nibh leo non nisl vitae porta lobortis, enim neque fringilla nunc, 
+																eget faucibus lacus sem quis nunc suspendisse nec lectus sit amet augue rutrum vulputate ut ut mi. Aenean 
+																elementum, mi sit amet porttitor lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor
+																sit amet nullam consequat feugiat dolore tempus. Elementum odio duis semper risus et lectus commodo fringilla. 
+																Maecenas sagittis convallis justo vel mattis. 
+															</p>
+														</section>
+														<section>
+															<header>
+																<h3>Mayfair</h3>
+															</header>
+															<p>
+																Nunc diam iaculis massa, et aliquet nibh leo non nisl vitae porta lobortis, enim neque fringilla nunc, 
+																eget faucibus lacus sem quis nunc suspendisse nec lectus sit amet augue rutrum vulputate ut ut mi. Aenean 
+																elementum, mi sit amet porttitor lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor
+																sit amet nullam consequat feugiat dolore tempus. Elementum odio duis semper risus et lectus commodo fringilla. 
+																Maecenas sagittis convallis justo vel mattis. 
+															</p>
+														</section>	
+
+															<section>
+															<header>
+																<h3>Strand </h3>
+															</header>
+															<p>
+																Nunc diam iaculis massa, et aliquet nibh leo non nisl vitae porta lobortis, enim neque fringilla nunc, 
+																eget faucibus lacus sem quis nunc suspendisse nec lectus sit amet augue rutrum vulputate ut ut mi. Aenean 
+																elementum, mi sit amet porttitor lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor
+																sit amet nullam consequat feugiat dolore tempus. Elementum odio duis semper risus et lectus commodo fringilla. 
+																Maecenas sagittis convallis justo vel mattis. 
+															</p>
+														</section>
+														
+														<section>
+															<header>
+																<h3>Oxford Street </h3>
+															</header>
+															<p>
+																Nunc diam iaculis massa, et aliquet nibh leo non nisl vitae porta lobortis, enim neque fringilla nunc, 
+																eget faucibus lacus sem quis nunc suspendisse nec lectus sit amet augue rutrum vulputate ut ut mi. Aenean 
+																elementum, mi sit amet porttitor lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor
+																sit amet nullam consequat feugiat dolore tempus. Elementum odio duis semper risus et lectus commodo fringilla. 
+																Maecenas sagittis convallis justo vel mattis. 
+															</p>
+														</section>
+														
+														<section>
+															<header>
+																<h3>Charing Cross </h3>
+															</header>
+															<p>
+																Nunc diam iaculis massa, et aliquet nibh leo non nisl vitae porta lobortis, enim neque fringilla nunc, 
+																eget faucibus lacus sem quis nunc suspendisse nec lectus sit amet augue rutrum vulputate ut ut mi. Aenean 
+																elementum, mi sit amet porttitor lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor
+																sit amet nullam consequat feugiat dolore tempus. Elementum odio duis semper risus et lectus commodo fringilla. 
+																Maecenas sagittis convallis justo vel mattis. 
+															</p>
+														</section>
+												
+													</article>
 
 											</div>
 										</div>
 									</div>
-																		<header class="major">
-									</header>
 								</section>
 
 						</div>

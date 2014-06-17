@@ -91,10 +91,10 @@
 					<div class="12u">
 						<section>
 						<div class="row">
-								<div class="12u skel-cell-important">
-										
+									<div class="4u" style="width:800px;">	
 		<form id="contact-form" action="contact_confirmation.php" method="post">
 			<h3>Sign up to be a VIP Member!</h3>
+			<br/>
 			<div>
 				<label>
 					<span>First Name: (required)</span>
@@ -168,9 +168,25 @@
 			</div>
 		</form>										
 											
+						</div> <!-- SIDEBAR FINISHED -->
+						
+						<div class="8u skel-cell-important" style="width:450px;">
+																			<article class="box is-post">
+														<a href="http://facebook.com/DreametryDoodle" class="image image-full"><img src="images/picVIP02.jpg" alt="" /></a>
+														<header>
+															<h2>V.I.P.</h2>
+															<span class="byline">Get all the benefits</span>
+														</header>
+														<p>
+															Jump the Queue. Half price drinks. Always be on the Guest List. VIP Lounge. Double tabs on all tables.
+															Jump the Queue. Half price drinks. Always be on the Guest List. VIP Lounge. Double tabs on all tables.
+															Jump the Queue. Half price drinks. Always be on the Guest List. VIP Lounge. Double tabs on all tables.
+														</p>														
+														</section>
+													</article>
 						</div>
 						
-						
+					
 							</div>
 					
 					</section>
@@ -202,11 +218,11 @@
 										<h2>Venues</h2>
 									</header>
 									<ul class="divided">
-										<li><a href="venues.html">Piccadilly</a></li>
-										<li><a href="venues.html">Mayfair</a></li>
-										<li><a href="venues.html">Strand</a></li>
-										<li><a href="venues.html">Oxford Street</a></li>
-										<li><a href="venues.html">Charing Cross</a></li>
+										<li><a href="venues.php">Piccadilly</a></li>
+										<li><a href="venues.php">Mayfair</a></li>
+										<li><a href="venues.php">Strand</a></li>
+										<li><a href="venues.php">Oxford Street</a></li>
+										<li><a href="venues.php">Charing Cross</a></li>
 									</ul>
 								</section>
 

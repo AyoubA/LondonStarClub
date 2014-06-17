@@ -19,6 +19,8 @@
 		</noscript>
 		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
 		
+		<link rel="stylesheet" href="css/forms.css" />
+		
 	<!-- MEMBER SIGN UP FEE. DIFFERENT DISCOUNT FOR EACH EVENT.-->
 	
 	</head>
@@ -84,10 +86,53 @@
 		
 		<!-- Main Wrapper -->
 			<div id="main-wrapper">		
-				<div class="container">
-						
+				<div class="container" style="width:700px; text-align:center;">
+					<div class="row"  >
+						<div class="12u"  >
+							
+							<!-- Portfolio -->
+								<section>
+									<div>
+										<div class="row" >
+											<div class="12u skel-cell-important"  >
+												
+												<!-- Content -->
+													<article class="box is-post" >
+														<a href="http://facebook.com/LondonStarClub" class="image image-full"><img src="images/picVIP03.jpg" alt="" /></a>
+														
+														<header class="major">
+														<h2> Login </h2>
+														</header>
+														
+														<form id="contact-form" action="contact_confirmation.php" method="post">
+			<div>
+				<label>
+					<span>Email: (required)</span>
+					<input placeholder="Please enter your name" type="email" name="email" required autofocus>
+				</label>
+			</div>
+			<div>
+				<label>
+					<span>Password: (required)</span>
+					<input placeholder="Please enter your email address" type="password" name="password" required>
+				</label>
+			</div>
+			<br/>
+			<div>
+				<button name="submit" type="submit">Login!</button>
+			</div>
+		</form>
+														
+														
+													</article>
 
+											</div>
+										</div>
+									</div>
+								</section>
 
+						</div>
+					</div>
 						
 				</div>
 			</div>
@@ -115,11 +160,11 @@
 										<h2>Venues</h2>
 									</header>
 									<ul class="divided">
-										<li><a href="venues.html">Piccadilly</a></li>
-										<li><a href="venues.html">Mayfair</a></li>
-										<li><a href="venues.html">Strand</a></li>
-										<li><a href="venues.html">Oxford Street</a></li>
-										<li><a href="venues.html">Charing Cross</a></li>
+										<li><a href="venues.php">Piccadilly</a></li>
+										<li><a href="venues.php">Mayfair</a></li>
+										<li><a href="venues.php">Strand</a></li>
+										<li><a href="venues.php">Oxford Street</a></li>
+										<li><a href="venues.php">Charing Cross</a></li>
 									</ul>
 								</section>
 

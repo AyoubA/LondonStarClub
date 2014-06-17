@@ -233,11 +233,11 @@ So whether you’re enjoying unparalleled views of our iconic main room, chillin
 										<h2>Venues</h2>
 									</header>
 									<ul class="divided">
-										<li><a href="venues.html">Piccadilly</a></li>
-										<li><a href="venues.html">Mayfair</a></li>
-										<li><a href="venues.html">Strand</a></li>
-										<li><a href="venues.html">Oxford Street</a></li>
-										<li><a href="venues.html">Charing Cross</a></li>
+										<li><a href="venues.php">Piccadilly</a></li>
+										<li><a href="venues.php">Mayfair</a></li>
+										<li><a href="venues.php">Strand</a></li>
+										<li><a href="venues.php">Oxford Street</a></li>
+										<li><a href="venues.php">Charing Cross</a></li>
 									</ul>
 								</section>
 
