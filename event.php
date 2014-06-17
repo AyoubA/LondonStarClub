@@ -19,12 +19,8 @@
 		</noscript>
 		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
 		
-		<!-- 	SLIDER STYLESHEETS	-->
-    <script src="js/modernizr-2.6.1.min.js"></script> 
-    <script src="js/lean-slider.js"></script>
-    <link rel="stylesheet" href="css/lean-slider.css" type="text/css" />
-    <link rel="stylesheet" href="css/sample-styles.css" type="text/css" />
-		
+	<!-- MEMBER SIGN UP FEE. DIFFERENT DISCOUNT FOR EACH EVENT.-->
+	
 	</head>
 	<body class="homepage">
 
@@ -43,37 +39,52 @@
 									<!-- TOP BAR NAVIGATION -->
 										<nav id="nav">
 											<ul>
-												<li><a href="index.html">Home</a></li>
+												<li ><a href="index.php">Home</a></li>
 												<li> 
-													<a href="">Corporate Events</a>
+													<a href="corporate.php">Corporate Events</a>
 												</li>	
 												
 												<li>
-												<a href="index.html">Club Nights</a>
+												<a href="nights.php">Club Nights</a>
 													<ul> 
-														<li> <a href="students.html">Student Nights </a></li>
-														<li> <a href="index.html">Mystery Club </a></li>
-														<li> <a href="index.html">Happy Hour </a></li>
+														<li> <a href="students.php">Student Nights </a></li>
 													</ul>
 												</li> <!-- End of Club Nights Drop Down -->
-												
-												<li class="current_page_item"><a href="tickets.html">Tickets</a></li>
-												<li><a href="no-sidebar.html">Members</a></li>
-												<li><a href="contact.html">Contact Us</a></li>
+												<li><a href="mystery.php">Mystery Club/Happy Hour </a></li> <!-- make it stand out -->
+												<li ><a href="charity.php">Charity Events</a></li>
+												<li class="current_page_item"><a href="tickets.php">Tickets</a></li>
+												<li><a href="members.php">Members</a>
+													<ul> 													
+														<li> <a href="login.php">Login </a></li>
+														<li> <a href="register.php"> Become a member </a></li>
+													</ul>
+												</li> <!-- End of Members Drop Down -->
+												<li><a href="contact.php">Contact Us</a></li>
 											</ul>
 										</nav>						
 								</section>
 
 						</div>
-					</div>				
+					</div>			
+
 					
 				</div>
 			</div> 
+			
+			
+			
+			
+			
+			
+			
+			
+			
 		
 		
 		<!-- Main Wrapper -->
 			<div id="main-wrapper">		
 				<div class="container">
+						
 
 					<div class="row">
 						<div class="12u">
@@ -196,9 +207,20 @@ Please be aware that Croatians normally deem a double bed as two beds.
 
 						</div>
 					</div>
-					
+
+
+						
 				</div>
 			</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
 
 		<!-- Footer Wrapper -->
 			<div id="footer-wrapper">
@@ -211,15 +233,14 @@ Please be aware that Croatians normally deem a double bed as two beds.
 
 								<section>
 									<header>
-										<h2>Tempus consequat</h2>
+										<h2>Venues</h2>
 									</header>
 									<ul class="divided">
-										<li><a href="#">Lorem ipsum dolor sit amet sit veroeros</a></li>
-										<li><a href="#">Sed et blandit consequat sed tlorem blandit</a></li>
-										<li><a href="#">Adipiscing feugiat phasellus sed tempus</a></li>
-										<li><a href="#">Hendrerit tortor vitae mattis tempor sapien</a></li>
-										<li><a href="#">Sem feugiat sapien id suscipit magna felis nec</a></li>
-										<li><a href="#">Elit class aptent taciti sociosqu ad litora</a></li>
+										<li><a href="venues.html">Piccadilly</a></li>
+										<li><a href="venues.html">Mayfair</a></li>
+										<li><a href="venues.html">Strand</a></li>
+										<li><a href="venues.html">Oxford Street</a></li>
+										<li><a href="venues.html">Charing Cross</a></li>
 									</ul>
 								</section>
 
@@ -228,15 +249,14 @@ Please be aware that Croatians normally deem a double bed as two beds.
 
 								<section>
 									<header>
-										<h2>Ipsum et phasellus</h2>
+										<h2>Useful Information</h2>
 									</header>
 									<ul class="divided">
-										<li><a href="#">Lorem ipsum dolor sit amet sit veroeros</a></li>
-										<li><a href="#">Sed et blandit consequat sed tlorem blandit</a></li>
-										<li><a href="#">Adipiscing feugiat phasellus sed tempus</a></li>
-										<li><a href="#">Hendrerit tortor vitae mattis tempor sapien</a></li>
-										<li><a href="#">Sem feugiat sapien id suscipit magna felis nec</a></li>
-										<li><a href="#">Elit class aptent taciti sociosqu ad litora</a></li>
+										<li><a href="#">Terms and Conditions</a></li>
+										<li><a href="#">Privacy Policy</a></li>
+										<li><a href="#">Contact Us</a></li>
+										<li><a href="#">Site Map</a></li>
+										<li><a href="#">Careers</a></li>
 									</ul>
 								</section>
 
@@ -245,14 +265,12 @@ Please be aware that Croatians normally deem a double bed as two beds.
 							
 								<section>
 									<header>
-										<h2>Vitae tempor lorem</h2>
+										<h2>Join Us</h2>
 									</header>
 									<ul class="social">
-										<li><a class="fa fa-facebook solo" href="#"><span>Facebook</span></a></li>
-										<li><a class="fa fa-twitter solo" href="http://twitter.com/n33co"><span>Twitter</span></a></li>
-										<li><a class="fa fa-instagram solo" href=""><span>Dribbble</span></a></li>
-										<li><a class="fa fa-linkedin solo" href="#"><span>LinkedIn</span></a></li>
-										<li><a class="fa fa-google-plus solo" href="#"><span>Google+</span></a></li>
+										<li><a class="fa fa-facebook solo" href="http://facebook.com/LondonStarClub"><span>Facebook</span></a></li>
+										<li><a class="fa fa-twitter solo" href="http://facebook.com/LondonStarClub"><span>Twitter</span></a></li>
+										<li><a class="fa fa-instagram solo" href="http://facebook.com/LondonStarClub"><span>Dribbble</span></a></li>
 									</ul>
 									<ul class="contact">
 										<li>
@@ -283,9 +301,9 @@ Please be aware that Croatians normally deem a double bed as two beds.
 								<!-- Copyright -->
 									<div id="copyright">
 										<ul class="links">
-											<li>&copy; London Star Clubs	</li>
-											<li>Images: <a href="http://facebook.com/LondonStarClubs">Novus Liesure</a></li>
-											<li>Design: <a href="">AJM</a></li>
+											<li>&copy; London Star Club	</li>
+											<li>Images: <a href="http://facebook.com/LondonStarClub">Novus Liesure</a></li>
+											<li>Design: <a href="http://facebook.com/LondonStarClub">AJM</a></li>
 										</ul>
 									</div>
 

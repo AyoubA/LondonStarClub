@@ -2,7 +2,7 @@
 
 <html>
 	<head>
-		<title>London Star Club | Contact Us</title>
+		<title>London Star Club</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
@@ -18,7 +18,11 @@
 			<link rel="stylesheet" href="css/style-desktop.css" />
 		</noscript>
 		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
-		        <link rel="stylesheet" href="css/Contact.css" />
+		
+					<link rel="stylesheet" href="css/forms.css" />
+		
+	<!-- MEMBER SIGN UP FEE. DIFFERENT DISCOUNT FOR EACH EVENT.-->
+	
 	</head>
 	<body class="homepage">
 
@@ -37,37 +41,54 @@
 									<!-- TOP BAR NAVIGATION -->
 										<nav id="nav">
 											<ul>
-												<li ><a href="index.html">Home</a></li>
+												<li ><a href="index.php">Home</a></li>
 												<li> 
-													<a href="">Corporate Events</a>
+													<a href="corporate.php">Corporate Events</a>
 												</li>	
 												
 												<li>
-												<a href="index.html">Club Nights</a>
+												<a href="nights.php">Club Nights</a>
 													<ul> 
-														<li> <a href="students.html">Student Nights </a></li>
-														<li> <a href="index.html">Mystery Club </a></li>
-														<li> <a href="index.html">Happy Hour </a></li>
+														<li> <a href="students.php">Student Nights </a></li>
 													</ul>
 												</li> <!-- End of Club Nights Drop Down -->
-												
-												<li><a href="tickets.html">Tickets</a></li>
-												<li><a href="no-sidebar.html">Members</a></li>
-												<li class="current_page_item"><a href="contact.html">Contact Us</a></li>
+												<li><a href="mystery.php">Mystery Club/Happy Hour </a></li> <!-- make it stand out -->
+												<li ><a href="charity.php">Charity Events</a></li>
+												<li><a href="tickets.php">Tickets</a></li>
+												<li><a href="members.php">Members</a>
+													<ul> 													
+														<li> <a href="login.php">Login </a></li>
+														<li> <a href="register.php"> Become a member </a></li>
+													</ul>
+												</li> <!-- End of Members Drop Down -->
+												<li class="current_page_item"><a href="contact.php">Contact Us</a></li>
 											</ul>
 										</nav>						
 								</section>
 
 						</div>
-					</div>					
+					</div>
+					
+
 					
 				</div>
 			</div> 
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
 		
 		<!-- Main Wrapper -->
-			<div id="main-wrapper">
+			<div id="main-wrapper">		
 				<div class="container">
-					<div class="row">
+						
+						<div class="row">
 						<div class="12u">
 							
 							<!-- CONTACT BOXES -->
@@ -84,6 +105,13 @@
 		<div id="main" style="padding:0 0 0 0;">
 		
 		<!-- Form -->
+		<?php
+		
+		if (isset($_POST['postdata']))		
+		print '<label><span>Message succesfully sent!</span></label>';
+		
+			
+		?>
 		<form id="contact-form" action="contact_confirmation.php" method="post">
 			<h3>Contact Us</h3>
 			<h4>Fill in the form below, and we'll get back to you as soon as possible.</h4>
@@ -108,7 +136,7 @@
 			<div>
 				<label>
 					<span>Message: (required)</span>
-					<textarea placeholder="Include all the details you can" tabindex="messege" required></textarea>
+					<textarea placeholder="Include all the details you can" name="messege" required> </textarea>
 				</label>
 			</div>
 			<div>
@@ -146,29 +174,39 @@ W1 55 </p><br />
 
 						</div>
 					</div>
+
+						
 				</div>
 			</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
 
 		<!-- Footer Wrapper -->
 			<div id="footer-wrapper">
 				
 				<!-- Footer -->
 					<section id="footer" class="container">
-
+					
 						<div class="row">
 							<div class="4u">
 
 								<section>
 									<header>
-										<h2>Tempus consequat</h2>
+										<h2>Venues</h2>
 									</header>
 									<ul class="divided">
-										<li><a href="#">Lorem ipsum dolor sit amet sit veroeros</a></li>
-										<li><a href="#">Sed et blandit consequat sed tlorem blandit</a></li>
-										<li><a href="#">Adipiscing feugiat phasellus sed tempus</a></li>
-										<li><a href="#">Hendrerit tortor vitae mattis tempor sapien</a></li>
-										<li><a href="#">Sem feugiat sapien id suscipit magna felis nec</a></li>
-										<li><a href="#">Elit class aptent taciti sociosqu ad litora</a></li>
+										<li><a href="venues.html">Piccadilly</a></li>
+										<li><a href="venues.html">Mayfair</a></li>
+										<li><a href="venues.html">Strand</a></li>
+										<li><a href="venues.html">Oxford Street</a></li>
+										<li><a href="venues.html">Charing Cross</a></li>
 									</ul>
 								</section>
 
@@ -177,15 +215,14 @@ W1 55 </p><br />
 
 								<section>
 									<header>
-										<h2>Ipsum et phasellus</h2>
+										<h2>Useful Information</h2>
 									</header>
 									<ul class="divided">
-										<li><a href="#">Lorem ipsum dolor sit amet sit veroeros</a></li>
-										<li><a href="#">Sed et blandit consequat sed tlorem blandit</a></li>
-										<li><a href="#">Adipiscing feugiat phasellus sed tempus</a></li>
-										<li><a href="#">Hendrerit tortor vitae mattis tempor sapien</a></li>
-										<li><a href="#">Sem feugiat sapien id suscipit magna felis nec</a></li>
-										<li><a href="#">Elit class aptent taciti sociosqu ad litora</a></li>
+										<li><a href="#">Terms and Conditions</a></li>
+										<li><a href="#">Privacy Policy</a></li>
+										<li><a href="#">Contact Us</a></li>
+										<li><a href="#">Site Map</a></li>
+										<li><a href="#">Careers</a></li>
 									</ul>
 								</section>
 
@@ -194,14 +231,12 @@ W1 55 </p><br />
 							
 								<section>
 									<header>
-										<h2>Vitae tempor lorem</h2>
+										<h2>Join Us</h2>
 									</header>
 									<ul class="social">
-										<li><a class="fa fa-facebook solo" href="#"><span>Facebook</span></a></li>
-										<li><a class="fa fa-twitter solo" href="http://twitter.com/n33co"><span>Twitter</span></a></li>
-										<li><a class="fa fa-instagram solo" href=""><span>Dribbble</span></a></li>
-										<li><a class="fa fa-linkedin solo" href="#"><span>LinkedIn</span></a></li>
-										<li><a class="fa fa-google-plus solo" href="#"><span>Google+</span></a></li>
+										<li><a class="fa fa-facebook solo" href="http://facebook.com/LondonStarClub"><span>Facebook</span></a></li>
+										<li><a class="fa fa-twitter solo" href="http://facebook.com/LondonStarClub"><span>Twitter</span></a></li>
+										<li><a class="fa fa-instagram solo" href="http://facebook.com/LondonStarClub"><span>Dribbble</span></a></li>
 									</ul>
 									<ul class="contact">
 										<li>
@@ -232,9 +267,9 @@ W1 55 </p><br />
 								<!-- Copyright -->
 									<div id="copyright">
 										<ul class="links">
-											<li>&copy; London Star Clubs	</li>
-											<li>Images: <a href="http://facebook.com/LondonStarClubs">Novus Liesure</a></li>
-											<li>Design: <a href="">AJM</a></li>
+											<li>&copy; London Star Club	</li>
+											<li>Images: <a href="http://facebook.com/LondonStarClub">Novus Liesure</a></li>
+											<li>Design: <a href="http://facebook.com/LondonStarClub">AJM</a></li>
 										</ul>
 									</div>
 

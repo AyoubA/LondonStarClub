@@ -45,22 +45,27 @@
 									<!-- TOP BAR NAVIGATION -->
 										<nav id="nav">
 											<ul>
-												<li class="current_page_item"><a href="index.html">Home</a></li>
+												<li class="current_page_item"><a href="index.php">Home</a></li>
 												<li> 
-													<a href="">Corporate Events</a>
+													<a href="corporate.php">Corporate Events</a>
 												</li>	
 												
 												<li>
-												<a href="index.html">Club Nights</a>
+												<a href="nights.php">Club Nights</a>
 													<ul> 
-														<li> <a href="students.html">Student Nights </a></li>
+														<li> <a href="students.php">Student Nights </a></li>
 													</ul>
 												</li> <!-- End of Club Nights Drop Down -->
-												<li><a href="">Mystery Club/Happy Hour </a></li> <!-- make it stand out -->
-												<li><a href="">Charity Events</a></li>
-												<li><a href="tickets.html">Tickets</a></li>
-												<li><a href="index.html">Members</a></li>
-												<li><a href="contact.html">Contact Us</a></li>
+												<li><a href="mystery.php">Mystery Club/Happy Hour </a></li> <!-- make it stand out -->
+												<li ><a href="charity.php">Charity Events</a></li>
+												<li><a href="tickets.php">Tickets</a></li>
+												<li><a href="members.php">Members</a>
+													<ul> 													
+														<li> <a href="login.php">Login </a></li>
+														<li> <a href="register.php"> Become a member </a></li>
+													</ul>
+												</li> <!-- End of Members Drop Down -->
+												<li><a href="contact.php">Contact Us</a></li>
 											</ul>
 										</nav>						
 								</section>
@@ -150,7 +155,7 @@
 										<div class="row">
 											<div class="6u">
 												<section class="box">
-													<a href="http://facebook.com/LondonStarClubs" class="image image-full"><img src="images/pic08.jpg" alt="" /></a>
+													<a href="http://facebook.com/LondonStarClub" class="image image-full"><img src="images/pic08.jpg" alt="" /></a>
 													<header>
 														<h3>Corporate Events at Cafe de Paris</h3>
 														<span class="byline">Posted 45 minutes ago</span>
@@ -164,7 +169,7 @@
 											</div>
 											<div class="6u">
 												<section class="box">
-													<a href="http://facebook.com/LondonStarClubs" class="image image-full"><img src="images/pic09.jpg" alt="" /></a>
+													<a href="http://facebook.com/LondonStarClub" class="image image-full"><img src="images/pic09.jpg" alt="" /></a>
 													<header>
 														<h3>Student Nights at Fabric</h3>
 														<span class="byline">Posted 45 minutes ago</span>
@@ -191,7 +196,7 @@
 										<div class="row">
 											<div class="4u">
 												<section class="box">
-													<a href="http://facebook.com/LondonStarClubs" class="image image-full"><img src="images/pic02.jpg" alt="" /></a>
+													<a href="http://facebook.com/LondonStarClub" class="image image-full"><img src="images/pic02.jpg" alt="" /></a>
 													<header>
 														<h3>Masked Party</h3>
 													</header>
@@ -203,7 +208,7 @@
 											</div>
 											<div class="4u">
 												<section class="box">
-													<a href="http://facebook.com/LondonStarClubs" class="image image-full"><img src="images/pic03.jpg" alt="" /></a>
+													<a href="http://facebook.com/LondonStarClub" class="image image-full"><img src="images/pic03.jpg" alt="" /></a>
 													<header>
 														<h3>Boogie Nights Party</h3>
 													</header>
@@ -215,7 +220,7 @@
 											</div>
 											<div class="4u">
 												<section class="box">
-													<a href="http://facebook.com/LondonStarClubs" class="image image-full"><img src="images/pic04.jpg" alt="" /></a>
+													<a href="http://facebook.com/LondonStarClub" class="image image-full"><img src="images/pic04.jpg" alt="" /></a>
 													<header>
 														<h3>Arabian Nights</h3>
 													</header>
@@ -248,15 +253,14 @@
 
 								<section>
 									<header>
-										<h2>Tempus consequat</h2>
+										<h2>Venues</h2>
 									</header>
 									<ul class="divided">
-										<li><a href="#">Lorem ipsum dolor sit amet sit veroeros</a></li>
-										<li><a href="#">Sed et blandit consequat sed tlorem blandit</a></li>
-										<li><a href="#">Adipiscing feugiat phasellus sed tempus</a></li>
-										<li><a href="#">Hendrerit tortor vitae mattis tempor sapien</a></li>
-										<li><a href="#">Sem feugiat sapien id suscipit magna felis nec</a></li>
-										<li><a href="#">Elit class aptent taciti sociosqu ad litora</a></li>
+										<li><a href="venues.html">Piccadilly</a></li>
+										<li><a href="venues.html">Mayfair</a></li>
+										<li><a href="venues.html">Strand</a></li>
+										<li><a href="venues.html">Oxford Street</a></li>
+										<li><a href="venues.html">Charing Cross</a></li>
 									</ul>
 								</section>
 
@@ -265,15 +269,14 @@
 
 								<section>
 									<header>
-										<h2>Ipsum et phasellus</h2>
+										<h2>Useful Information</h2>
 									</header>
 									<ul class="divided">
-										<li><a href="#">Lorem ipsum dolor sit amet sit veroeros</a></li>
-										<li><a href="#">Sed et blandit consequat sed tlorem blandit</a></li>
-										<li><a href="#">Adipiscing feugiat phasellus sed tempus</a></li>
-										<li><a href="#">Hendrerit tortor vitae mattis tempor sapien</a></li>
-										<li><a href="#">Sem feugiat sapien id suscipit magna felis nec</a></li>
-										<li><a href="#">Elit class aptent taciti sociosqu ad litora</a></li>
+										<li><a href="#">Terms and Conditions</a></li>
+										<li><a href="#">Privacy Policy</a></li>
+										<li><a href="#">Contact Us</a></li>
+										<li><a href="#">Site Map</a></li>
+										<li><a href="#">Careers</a></li>
 									</ul>
 								</section>
 
@@ -282,12 +285,12 @@
 							
 								<section>
 									<header>
-										<h2>Vitae tempor lorem</h2>
+										<h2>Join Us</h2>
 									</header>
 									<ul class="social">
-										<li><a class="fa fa-facebook solo" href="#"><span>Facebook</span></a></li>
-										<li><a class="fa fa-twitter solo" href="http://twitter.com/n33co"><span>Twitter</span></a></li>
-										<li><a class="fa fa-instagram solo" href=""><span>Dribbble</span></a></li>
+										<li><a class="fa fa-facebook solo" href="http://facebook.com/LondonStarClub"><span>Facebook</span></a></li>
+										<li><a class="fa fa-twitter solo" href="http://facebook.com/LondonStarClub"><span>Twitter</span></a></li>
+										<li><a class="fa fa-instagram solo" href="http://facebook.com/LondonStarClub"><span>Dribbble</span></a></li>
 									</ul>
 									<ul class="contact">
 										<li>
@@ -318,9 +321,9 @@
 								<!-- Copyright -->
 									<div id="copyright">
 										<ul class="links">
-											<li>&copy; London Star Clubs	</li>
-											<li>Images: <a href="http://facebook.com/LondonStarClubs">Novus Liesure</a></li>
-											<li>Design: <a href="">AJM</a></li>
+											<li>&copy; London Star Club	</li>
+											<li>Images: <a href="http://facebook.com/LondonStarClub">Novus Liesure</a></li>
+											<li>Design: <a href="http://facebook.com/LondonStarClub">AJM</a></li>
 										</ul>
 									</div>
 
