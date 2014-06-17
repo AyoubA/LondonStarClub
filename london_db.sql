@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 17, 2014 at 02:06 AM
+-- Generation Time: Jun 17, 2014 at 02:53 AM
 -- Server version: 5.6.16
 -- PHP Version: 5.5.11
 
@@ -28,9 +28,9 @@ SET time_zone = "+00:00";
 
 CREATE TABLE IF NOT EXISTS `customers` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `title` varchar(3) NOT NULL,
   `firstName` varchar(15) NOT NULL,
   `lastName` varchar(15) NOT NULL,
+  `gender` varchar(3) NOT NULL,
   `email` varchar(30) NOT NULL,
   `phoneNumber` int(11) NOT NULL,
   `addressLine1` varchar(30) NOT NULL,
@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS `customers` (
   `addressCity` varchar(15) NOT NULL,
   `addressPostal` varchar(6) NOT NULL,
   `password` varchar(32) NOT NULL,
-  `previousbuys` int(11) NOT NULL,
+  `discount` tinyint(1) NOT NULL,
   `customertypeID` int(11) NOT NULL COMMENT 'type of customer, regular or corporate',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
@@ -60,7 +60,21 @@ CREATE TABLE IF NOT EXISTS `events` (
   `pricemale` decimal(10,0) NOT NULL,
   `pricefemale` decimal(10,0) NOT NULL,
   `memberprice` decimal(10,0) NOT NULL,
-  `stock` int(11) NOT NULL,
+  `ticketstock` int(11) NOT NULL,
+  `ticketssold` int(11) NOT NULL COMMENT 'Amount of tickets sold for this event. To keep track of how many people going and when sold out.',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `orders`
+--
+
+CREATE TABLE IF NOT EXISTS `orders` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `customerID` int(11) NOT NULL,
+  `eventID` int(11) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
