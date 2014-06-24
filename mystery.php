@@ -128,44 +128,51 @@
 									</div>
 							</div>
 							
-					<div class="row" > 
-											<div class="4u" >
-												<section class="box">
-													<a href="http://facebook.com/LondonStarClub" class="image image-full"><img src="images/picMystery03.jpg" alt="" /></a>
-													<header>
-														<h3>Masked Party</h3>
-													</header>
-													<p>July 17th 2014, 10:00PM to 03:00AM @ China White</p>
-													<footer>
-														<a href="#" class="button alt">Find out more</a>
-													</footer>
-												</section>
-											</div>
-											<div class="4u">
-												<section class="box">
-													<a href="http://facebook.com/LondonStarClub" class="image image-full"><img src="images/picMystery03.jpg" alt="" /></a>
-													<header>
-														<h3>Boogie Nights Party</h3>
-													</header>
-													<p>July 23rd 2014, 10:00PM to 03:00AM @ Tiger Tiger</p>
-													<footer>
-														<a href="#" class="button alt">Find out more</a>
-													</footer>
-												</section>
-											</div>
-											<div class="4u">
-												<section class="box">
-													<a href="http://facebook.com/LondonStarClub" class="image image-full"><img src="images/picMystery03.jpg" alt="" /></a>
-													<header>
-														<h3>Arabian Nights</h3>
-													</header>
-													<p>July 31st 2014, 10:00PM to 03:00AM @ Sway Bar</p>
-													<footer>
-														<a href="#" class="button alt">Find out more</a>
-													</footer>
-												</section>
-											</div>
-						</div>	
+					<?php 
+
+							require 'DatabasePosts.php';
+									
+							$sql = "SELECT * FROM events WHERE typeID = 5 ORDER BY date ASC";
+							$STH = $GLOBALS["db"]->query($sql);
+							$count = 0;
+						
+							while ($row = $STH->fetch(PDO::FETCH_ASSOC)) {
+			
+							$id = $row['id'];
+							$name = $row ['name'];
+							$description = $row['description'];
+							$typeID = $row['typeID'];
+							$company = $row['companyID'];
+							$date = date_create($row['date']);
+							$time = $row['timeStart'];
+							$timeEnd = $row['timeEnd'];
+							$venueID = $row['venueID'];
+							$priceMale = $row['pricemale'];
+							$priceFemale = $row['pricefemale'];
+							$discount = $row['memberdiscount'];
+							$stock = $row['ticketstock'];	
+							$flyer = $row['flyerName'];
+			
+							if ($count == 0) echo '<div class="row">'; 
+			
+						echo '<div class="4u">
+									<section class="box">
+							<a href="http://facebook.com/LondonStarClub" class="image image-full" style="overflow: hidden; width: 367px; height: 260px;" ><img src="images/'.$flyer.'.jpg" alt="" /></a>
+									<header>
+										<h3>'.$name.'</h3>
+								<p> '.date_format($date, ' l jS F Y').' at '.date('g:ia', strtotime($time)).' </p>
+									</header>													
+						<p style="text-overflow: ellipsis;  max-width: 350px; white-space: nowrap; overflow:hidden;">'.$description.'</p>
+									<footer>
+								<a href="event.php?ticketID='.$id.'" class="button alt">Find out more</a>
+							</footer>
+						</section>
+					</div>';
+					$count++;
+					if ($count == 3) {echo '</div>'; $count = 0;}		
+			} if ($count < 3) echo '</div>';
+										
+										?>	
 							
 							
 					</div>	

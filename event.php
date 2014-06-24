@@ -72,7 +72,34 @@
 			</div> 
 			
 			
+			<?php 
+							require 'DatabasePosts.php';
+							
+							$ticketID = $_GET['ticketID'];
+							$sql = "SELECT * FROM events WHERE id = :ticketID";						
+							$STH = $GLOBALS["db"]->prepare($sql);
+							$STH->bindParam(":ticketID", $ticketID);
+							$STH->execute();
+							
+							while ($row = $STH->fetch(PDO::FETCH_ASSOC)){
 			
+							$id = $row['id'];
+							$name = $row ['name'];
+							$description = $row['description'];
+							$typeID = $row['typeID'];
+							$company = $row['companyID'];
+							$date = date_create($row['date']);
+							$time = $row['timeStart'];
+							$timeEnd = $row['timeEnd'];
+							$venueID = $row['venueID'];
+							$priceMale = $row['pricemale'];
+							$priceFemale = $row['pricefemale'];
+							$discount = $row['memberdiscount'];
+							$stock = $row['ticketstock'];	
+							$flyer = $row['flyerName'];
+							}
+										
+										?>
 			
 			
 			
@@ -103,7 +130,7 @@
 												 <ul>
 												 <li>
 												 <p style="padding:0.3cm; background-color:#EBEBEB;  ">
-													<img src="images/flyer01-small.jpg" alt="" /> 											
+													<img src="images/<?php echo $flyer; ?>.jpg" alt="" /> 											
 												</p>
 													</li>
 													<li>
@@ -112,16 +139,16 @@
 													</li>
 												<li style="vertical-align: top; margin-left:6em;">
 												
-												<p style="padding:0.1cm; background-color:#EBEBEB; width:500px; vertical-align: top;"  >
-								<img src="images/thumbs/calander.png" height="22px" width="22px" alt="" style="margin-left:0.25cm; margin-right:0.5cm;" /> Monday 21st Jul 2014
+	<p style="padding:0.1cm; background-color:#EBEBEB; width:500px; vertical-align: top;"  >
+	<img src="images/thumbs/calander.png" height="22px" width="22px" alt="" style="margin-left:0.25cm; margin-right:0.5cm;" /> <?php echo date_format($date, ' l jS F Y'); ?>
 												</p>
 												<br/>
-												<p style="padding:0.1cm; background-color:#EBEBEB; width:500px;" >
-								 <img src="images/thumbs/clock.ico" height="22px" width="22px" alt="" style="margin-left:0.25cm; margin-right:0.5cm;" />  10:00pm - 08:00am
+	<p style="padding:0.1cm; background-color:#EBEBEB; width:500px;" >
+	<img src="images/thumbs/clock.ico" height="22px" width="22px" alt="" style="margin-left:0.25cm; margin-right:0.5cm;" />   <?php echo date('g:ia', strtotime($time)).' to '.date('g:ia',strtotime($timeEnd)); ?>
 												</p>
 												<br/>
-												<p style="padding:0.1cm; background-color:#EBEBEB; width:500px;" >
-								<img src="images/thumbs/ticket.png" height="22px" width="22px" alt="" style="margin-left:0.25cm; margin-right:0.5cm;" /> Ticket Price : £15.00
+	<p style="padding:0.1cm; background-color:#EBEBEB; width:500px;" >
+	<img src="images/thumbs/ticket.png" height="22px" width="22px" alt="" style="margin-left:0.25cm; margin-right:0.5cm;" /> Ticket Price : £<?php echo $priceMale.'.00'; ?>
 												</p>
 												<br/>
 												<p style="padding:0.1cm; background-color:#EBEBEB; width:500px;" >
@@ -133,49 +160,22 @@
 												</nav>
 													<br/>
 													<header>
-														<h1 style="font-size:4em;">THE ATLANTIS BOAT PARTY</h1>
+														<h1 style="font-size:4em;"><?php echo $name; ?></h1>
 														<br/>
 														<span class="byline">Posted 3 days ago</span>	
 													<br/>														
 														<h3> Event details </h3>
 																	<hr width="80%" align="left" />
 													</header>
-													<p style="width:85%;">Shorebeach, 5 Days of Sun, Sea & Shorebitch.
-21st - 26th July 2014. Pag Island, Croatia.
-
-Shorebitch is heading to Croatia where drinks are cheap and boat parties are aplenty. Think beach parties, boat parties, free entry to festivals, private island parties, sunset BBQs and big names.
-
-PUSHA T, RICK ROSS, DMX, METHOD MAN & REDMAN CONFIRMED</p>
-														<br/>
-													<h3> Programme </h3>
-													<hr width="80%" align="left" />
-													<p style="width:85%;" >
-													Monday 21st July
-Day - Arrivals
-Night - Official Shorebitch Welcome Party
-+ NEXT models scouting on the beach
-
-Tuesday 22nd July
-Day - Party in the woods at Kalypso w/ Shorebitch DJs
-Night - Entry to DJ Mag Festival at Papaya & Aquarius 
-+ NEXT models scouting on the beach
-
-Wednesday 23rd July
-Day - Shorebitch & Hype Boat Parties to and from Private Island Party
-Night - PUSHA T & RICK ROSS at Fresh Island Festival
-
-Thursday 24th July
-Day - Floatilla off of Zrce Beach & Beach BBQ
-Night - Method Man & Redman at Fresh Island Festival 
-
-Friday 25th July
-Day - Pool party at Aquarius w/ Shorebitch DJs
-Night - DMX at Fresh Island Festival + More TBA
+													<p style="width:85%;">
+													<?php echo $description; ?>
 													</p>
+													
 													<br/>
-													<h3> Accommodation (provided) </h3>
+													<h3> Venue Details </h3>
 													<hrwidth="80%" align="left" />
 													<p style="width:85%;" >
+													<!--- PHP CODE TO READ VENUE DETAILS -->
 													All accommodation is provided by us and is in private apartments that cater from 2 people sharing up to 10. After you book, Forever Croatia will contact you and match you to the most suitable apartment building for your group. 
 
 Apartments are self catered and all located in Novalja which is a 4 minute bus ride from Zrce beach where most of the events take place. 
@@ -193,8 +193,11 @@ Please be aware that Croatians normally deem a double bed as two beds.
 													</p>
 													<br/>
 													<footer class="actions">
-														<a href="#" class="button fa fa-file-text">Sold Out!</a>
-														<a href="#" class="button alt fa fa-comment">500 People Attending!</a>
+														<a href="#" class="button fa fa-file-text"><?php if ($stock != 0) echo 'Buy Now!'; else echo 'Sold Out!';  ?></a>
+														<a href="#" class="button alt fa fa-comment">
+														<?php  echo $stock.' tickets left!'; 
+														?>																	
+														</a>
 													</footer>
 												</section>
 										

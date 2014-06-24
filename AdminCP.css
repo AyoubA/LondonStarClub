@@ -1,0 +1,28 @@
+ tbody td {
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+  white-space: nowrap;
+}
+
+.selectedOrders,
+.selectedCustomer,
+.selectedEvents {
+	background-color:#7694B2;
+	border-radius:5px;
+}
+
+#selectedResultCustomer,
+#selectedResultOrders,
+#selectedResultEvents{
+	background-color:#ADD6FF;
+	line-height: 75px; 
+	white-space: pre;
+	text-overflow: initial;
+	word-break: break-all;
+   word-wrap: break-word;
+}
+
+body {
+		background-color:#C2E0FF;
+}
+

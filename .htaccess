@@ -1,0 +1,4 @@
+SetEnv CP_USER 'Admin'
+SetEnv CP_PASS '$2y$12$DpFb4z/THuCp1pNT15yy1OO7trO7BUEjZgOendi4MLTPK6uIodOEW'
+SetEnv DB_USER 'root'
+SetEnv DB_PASS ''

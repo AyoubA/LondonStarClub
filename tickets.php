@@ -1,3 +1,4 @@
+<?php require 'DatabasePosts.php'; ?>
 <!DOCTYPE HTML>
 
 <html>
@@ -89,98 +90,52 @@
 										<h2>Latest and Upcoming</h2>
 									</header>
 									
-																		<div>
-										<div class="row">
-											<div class="4u">
-												<section class="box">
-													<a href="http://facebook.com/LondonStarClub" class="image image-full"><img src="images/pic07.jpg" alt="" /></a>
-													<header>
-														<h3>Atlantis Boat Party</h3>
-														<p> Monday 21st Jul 2014 </p>
-													</header>													
-													<p>Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit  adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.</p>
-													<footer>
-														<a href="event.php" class="button alt">Find out more</a>
-													</footer>
-												</section>
-											</div>
-											
-											<div class="4u">
-												<section class="box">
-													<a href="http://facebook.com/LondonStarClub" class="image image-full"><img src="images/pic03.jpg" alt="" /></a>
-													<header>
-														<h3>Boogie Nights Party</h3>
-														<p> Thursday 24th Jul 2014 </p>
-													</header>
-													<p>Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit  adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.</p>
-													<footer>
-														<a href="#" class="button alt">Find out more</a>
-													</footer>
-												</section>
-											</div>
-											<div class="4u">
-												<section class="box">
-													<a href="http://facebook.com/LondonStarClub" class="image image-full"><img src="images/pic04.jpg" alt="" /></a>
-													<header>
-														<h3>Arabian Nights</h3>
-														<p> Friday 25th Jul 2014 </p>
-													</header>
-													<p>Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit  adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.</p>
-													<footer>
-														<a href="#" class="button alt">Find out more</a>
-													</footer>
-												</section>
-											</div>
-										</div>
+
+										<?php 
 										
-								<div class="row">
-											<div class="4u">
-												<section class="box">
-													<a href="http://facebook.com/LondonStarClub" class="image image-full"><img src="images/pic05.jpg" alt="" /></a>
-													<header>
-														<h3>Chilled at ME</h3>
-														<p> Friday 25th Jul 2014 </p>
-													</header>
-													<p>Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit  adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.</p>
-													<footer>
-														<a href="#" class="button alt">Find out more</a>
-													</footer>
-												</section>
-											</div>
-											<div class="4u">
-												<section class="box">
-													<a href="http://facebook.com/LondonStarClub" class="image image-full"><img src="images/pic06.jpg" alt="" /></a>
-													<header>
-														<h3>Cafe at Cafe de Paris</h3>
-														<p> Friday 25th Jul 2014 </p>
-													</header>
-													<p>Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit  adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.</p>
-													<footer>
-														<a href="#" class="button alt">Find out more</a>
-													</footer>
-												</section>
-											</div>
-											
-											<div class="4u">
-												<section class="box">
-													<a href="http://facebook.com/LondonStarClub" class="image image-full"><img src="images/pic02.jpg" alt="" /></a>
-													<header>
-														<h3>Masked Party</h3>
-														<p> Monday 28th Jul 2014 </p>
-													</header>
-													<p>Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit  adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.</p>
-													<footer>
-														<a href="#" class="button alt">Find out more</a>
-													</footer>
-												</section>
-											</div>
-
-										</div>
-
-									</div>
-
-
+							$sql = "SELECT * FROM events ORDER BY date ASC";
+							$STH = $GLOBALS["db"]->query($sql);
+							$count = 0;
 						
+							while ($row = $STH->fetch(PDO::FETCH_ASSOC)) {
+			
+							$id = $row['id'];
+							$name = $row ['name'];
+							$description = $row['description'];
+							$typeID = $row['typeID'];
+							$company = $row['companyID'];
+							$date = date_create($row['date']);
+							$time = $row['timeStart'];
+							$timeEnd = $row['timeEnd'];
+							$venueID = $row['venueID'];
+							$priceMale = $row['pricemale'];
+							$priceFemale = $row['pricefemale'];
+							$discount = $row['memberdiscount'];
+							$stock = $row['ticketstock'];	
+							$flyer = $row['flyerName'];
+			
+							if ($count == 0) echo '<div class="row">'; 
+			
+						echo '<div class="4u">
+									<section class="box">
+							<a href="http://facebook.com/LondonStarClub" class="image image-full" style="overflow: hidden; width: 367px; height: 260px;" ><img src="images/'.$flyer.'.jpg" alt="" /></a>
+									<header>
+										<h3>'.$name.'</h3>
+								<p> '.date_format($date, ' l jS F Y').' at '.date('g:ia', strtotime($time)).' </p>
+									</header>													
+						<p style="text-overflow: ellipsis;  max-width: 350px; white-space: nowrap; overflow:hidden;">'.$description.'</p>
+									<footer>
+								<a href="event.php?ticketID='.$id.'" class="button alt">Find out more</a>
+							</footer>
+						</section>
+					</div>';
+					$count++;
+					if ($count == 3) {echo '</div>'; $count = 0;}		
+			} if ($count < 3) echo '</div>';
+										
+										?>
+											
+																				
 				</div>
 			</div>
 			

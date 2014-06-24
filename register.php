@@ -130,6 +130,12 @@
 			</div>
 			<div>
 				<label>
+					<span>Company: </span>
+					<input placeholder="Please enter your company " type="tel" name="company" >
+				</label>
+			</div>
+			<div>
+				<label>
 					<span>Full Address: (required)</span>
 					<input placeholder="Address Line 1" name="addressLine1" type="text" required> </input>
 					<input placeholder="Address Line 2" name="addressLine2" type="text" required> </input>

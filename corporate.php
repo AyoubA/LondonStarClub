@@ -147,55 +147,56 @@
 									</div>
 								</section>
 								
-								<!-- EVENTS LISTINGS HERE -->
-								<div>
-										<div class="row">
-											<div class="6u">
-												<section class="box">
-													<a href="http://facebook.com/LondonStarClub" class="image image-full"><img src="images/pic08.jpg" alt="" /></a>
-													<header>
-														<h3>Glaxo Smith Kline at Cafe de Paris</h3>
-														<span class="byline">Posted 45 minutes ago</span>
-													</header>
-													<p>Lorem ipsum dolor sit amet sit veroeros sed et blandit consequat sed veroeros lorem et blandit  adipiscing feugiat phasellus tempus hendrerit, tortor vitae mattis tempor, sapien sem feugiat sapien, id suscipit magna felis nec elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos lorem ipsum dolor sit amet.</p>
-													<footer class="actions">
-														<a href="#" class="button fa fa-file-text">Invite Only!</a>
-													</footer>
-												</section>
-											</div>
-											<div class="6u">
-												<section class="box">
-													<a href="http://facebook.com/LondonStarClub" class="image image-full"><img src="images/picCorporate04.jpg" alt="" /></a>
-													<header>
-														<h3>Goldman Sachs Networking at Aqua</h3>
-														<span class="byline">Posted 14 hours ago</span>
-													</header>
-													<p>Lorem ipsum dolor sit amet sit veroeros sed et blandit consequat sed veroeros lorem et blandit  adipiscing feugiat phasellus tempus hendrerit, tortor vitae mattis tempor, sapien sem feugiat sapien, id suscipit magna felis nec elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos lorem ipsum dolor sit amet.</p>
-													<footer class="actions" >
-														<a href="#" class="button fa fa-file-text">Invite Only!</a>
-													</footer>
-												</section>
-											</div>
-							
-										</div>	
+								<!-- EVENTS LISTINGS HERE -->								
+										
+										<?php 
 
-										<br/>
-										<div class="row">
-										<div class="6u">
-												<section class="box">
-													<a href="http://facebook.com/LondonStarClub" class="image image-full"><img src="images/picCorporate05.jpg" alt="" /></a>
-													<header>
-														<h3>AstraZeneca celebrations at ME</h3>
-														<span class="byline">Posted 7 days ago</span>
-													</header>
-													<p>Lorem ipsum dolor sit amet sit veroeros sed et blandit consequat sed veroeros lorem et blandit  adipiscing feugiat phasellus tempus hendrerit, tortor vitae mattis tempor, sapien sem feugiat sapien, id suscipit magna felis nec elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos lorem ipsum dolor sit amet.</p>
-													<footer class="actions" >
-														<a href="#" class="button fa fa-file-text">Invite Only!</a>
-													</footer>
-												</section>
-											</div>
-										</div>
-									</div>
+							require 'DatabasePosts.php';
+									
+							$sql = "SELECT * FROM events WHERE typeID = 1 ORDER BY date ASC";
+							$STH = $GLOBALS["db"]->query($sql);
+							$count = 0;
+						
+							while ($row = $STH->fetch(PDO::FETCH_ASSOC)) {
+			
+							$id = $row['id'];
+							$name = $row ['name'];
+							$description = $row['description'];
+							$typeID = $row['typeID'];
+							$company = $row['companyID'];
+							$date = date_create($row['date']);
+							$time = $row['timeStart'];
+							$timeEnd = $row['timeEnd'];
+							$venueID = $row['venueID'];
+							$priceMale = $row['pricemale'];
+							$priceFemale = $row['pricefemale'];
+							$discount = $row['memberdiscount'];
+							$stock = $row['ticketstock'];	
+							$flyer = $row['flyerName'];
+			
+							if ($count == 0) echo '<div class="row">'; 
+			
+						echo '<div class="6u">
+									<section class="box">
+							<a href="http://facebook.com/LondonStarClub" class="image image-full" style="overflow: hidden; height:300px;" ><img src="images/'.$flyer.'.jpg" alt="" /></a>
+									<header>
+										<h3 style="text-overflow: ellipsis;  max-width: 350px; white-space: nowrap; overflow:hidden;" >'.$name.'</h3>
+								<p> '.date_format($date, ' l jS F Y').' at '.date('g:ia', strtotime($time)).' </p>
+									</header>													
+						<p style="text-overflow: ellipsis;  max-width: 350px; white-space: nowrap; overflow:hidden;">'.$description.'</p>
+									<footer class="actions" >
+								<a href="event.php?ticketID='.$id.'" class="button fa fa-file-text">Invite Only!</a>
+								</footer>
+						</section>
+					</div>';
+					$count++;
+					if ($count == 2) {echo '</div> <br/>'; $count = 0;}		
+			} if ($count < 2) echo '</div>';
+										
+										?>	
+
+										
+									
 
 						</div>
 					</div>

@@ -77,27 +77,27 @@
 						<div class="12u">					
 							<!-- Banner -->
 								<section id="banner">
-								<div class="slider-wrapper">
+								<div class="slider-wrapper" style="width:100%;">
 									<div id="slider">
 										<div class="slide1">
-										<img class="rounded" src="images/pic01-01.jpg" alt="" />
+										<img  src="images/pic01-01.jpg" alt="" />
 										<header style="background-color: transparent;">
-											<h2>Corporate Events.</h2>
-											<span class="byline">Lorem ipsum dolor sit amet sit veroeros sed et blandit</span>
+											<h2>Corporate Events</h2>
+											<span class="byline"></span>
 										</header>
 										</div>
 											<div class="slide2">
-											<img class="rounded" src="images/pic01-02.jpg" alt="" />
+											<img  src="images/pic01-02.jpg" alt="" />
 											<header style="background-color: transparent;">
-											<h2>Student Nights.</h2>
-											<span class="byline">Lorem ipsum dolor sit amet sit veroeros sed et blandit</span>
+											<h2>Student Nights</h2>
+											
 										</header>
 											</div>
 												<div class="slide3">
-												<img class="rounded" src="images/pic01-03.jpg" alt="" />
+												<img src="images/pic01-03.jpg" alt="" />
 												<header style="background-color: transparent;">
-											<h2>Mystery Events.</h2>
-											<span class="byline">Lorem ipsum dolor sit amet sit veroeros sed et blandit</span>
+											<h2>Happy Hour Mystery Events</h2>
+											
 										</header>
 												</div>
 													</div>
@@ -131,7 +131,7 @@
 														<!-- SOCIAL BUTTONS -->
 								<div align="center" style="margin-top:10px; background: url('images/bg02.png');">
 									<ul class="social" style="margin: 0 0 1em 0;">
-										<li style="margin-left: 2em;"><a class="fa fa-facebook solo" href="http://www.facebook.com/LondonStarClub"><span>Facebook</span></a></li>
+										<li ><a class="fa fa-facebook solo" href="http://www.facebook.com/LondonStarClub"><span>Facebook</span></a></li>
 										<li style="margin-left: 2em;"><a class="fa fa-twitter solo" href="http://twitter.com/n33co"><span>Twitter</span></a></li>
 										<li style="margin-left: 2em;"><a class="fa fa-instagram solo" href=""><span>Dribbble</span></a></li>
 
